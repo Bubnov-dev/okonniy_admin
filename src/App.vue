@@ -9,8 +9,12 @@ import { RouterLink, RouterView } from "vue-router";
       <div class="row">
         <div class="col-md-2 p-5 pt-5 vstack gap-3 bg-secondary">
           <!-- {{ $host }} -->
-          <router-link class="text-light" to="/articles">Статьи</router-link>
-          <router-link class="text-light" to="/reviews">Отзывы</router-link>
+          <router-link class="text-light" to="/panelAdmin/articles"
+            >Статьи</router-link
+          >
+          <router-link class="text-light" to="/panelAdmin/reviews"
+            >Отзывы</router-link
+          >
         </div>
         <div class="col-md-10 mt-5 py-3 px-5">
           <div class="container">
@@ -30,7 +34,8 @@ import { RouterLink, RouterView } from "vue-router";
 <script>
 export default {
   provide: {
-    globalVariable: 123,
+    // host: "http://127.0.0.1:8000",
+    host: "",
   },
   data() {
     return {
